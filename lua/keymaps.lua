@@ -47,7 +47,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- run c++ code with tests
 vim.api.nvim_set_keymap('n', '<leader>rc', ':w<CR>:sp | terminal bash -c "g++ % -o %:r && ./%:r < input.txt; exec bash"<CR>', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap('n', '<leader>drc', ':!g++ -g -o main main.cpp<CR>', { noremap = true, silent = true })
 -- FUNCTIONS
 -- erstellen eine Projekts fuer competitive Programming
 -- Funktion zum Erstellen des Ordners und der Dateien
@@ -58,7 +58,7 @@ function CreateCppProject()
   vim.fn.mkdir(project_name, 'p')
 
   -- C++-Datei mit Boilerplate-Code erstellen
-  local cpp_file = project_name .. '/' .. project_name .. '.cpp'
+  local cpp_file = project_name .. '/' .. 'main' .. '.cpp'
   local cpp_boilerplate = [[
 #include <iostream>
 using namespace std;

@@ -13,13 +13,6 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-  {
-    'preservim/nerdtree',
-    config = function()
-      -- Optional: Füge hier deine NERDTree-Konfiguration hinzu
-      vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTreeToggle<CR>', { noremap = true, silent = true })
-    end,
-  },
 
   require 'kickstart/plugins/gitsigns',
 
@@ -54,7 +47,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
