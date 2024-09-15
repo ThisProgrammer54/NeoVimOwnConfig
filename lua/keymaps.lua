@@ -60,7 +60,7 @@ function CreateCppProject()
   -- C++-Datei mit Boilerplate-Code erstellen
   local cpp_file = project_name .. '/' .. 'main' .. '.cpp'
   local cpp_boilerplate = [[
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
